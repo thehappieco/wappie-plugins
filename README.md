@@ -11,7 +11,16 @@ them. You choose which numbers it may read
 when you sign in to the Wappie console, and you can revoke the connection there
 at any time.
 
-## Install
+> **You do not need this plugin to connect.** Every assistant takes the
+> connector's address as it is: paste `https://api.wappie.thehappie.co/mcp` in
+> Claude (or use the **Connect to Claude** button in the Wappie console), in
+> Codex under *Settings → MCP servers*, in Claude Code with
+> `claude mcp add --transport http --scope user wappie https://api.wappie.thehappie.co/mcp`,
+> or in ChatGPT's developer mode. Install the plugin only if you want its skill,
+> which tells the assistant what the connection can see and not to read
+> WhatsApp through the screen.
+
+## Install the plugin
 
 **Codex** (ChatGPT desktop app or CLI):
 
