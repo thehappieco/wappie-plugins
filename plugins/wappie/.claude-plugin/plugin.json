@@ -1,0 +1,19 @@
+{
+  "name": "wappie",
+  "version": "1.0.0",
+  "description": "Read-only access to your WhatsApp archive in Wappie: authorized numbers, chats, message metadata and activity.",
+  "author": {
+    "name": "The Happie Co",
+    "url": "https://wappie.thehappie.co/"
+  },
+  "homepage": "https://wappie.thehappie.co/",
+  "repository": "https://github.com/thehappieco/wappie-plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "whatsapp",
+    "archive",
+    "messages",
+    "read-only",
+    "mcp"
+  ]
+}

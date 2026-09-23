@@ -1,0 +1,15 @@
+{
+  "name": "wappie",
+  "description": "The official Wappie plugin: read-only, metadata-only access to your WhatsApp archive in Wappie.",
+  "owner": {
+    "name": "The Happie Co",
+    "url": "https://wappie.thehappie.co/"
+  },
+  "plugins": [
+    {
+      "name": "wappie",
+      "source": "./plugins/wappie",
+      "description": "Read-only access to your WhatsApp archive in Wappie: authorized numbers, chats, message metadata and activity."
+    }
+  ]
+}

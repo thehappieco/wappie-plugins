@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wappie": {
+      "type": "http",
+      "url": "https://api.wappie.thehappie.co/mcp"
+    }
+  }
+}
