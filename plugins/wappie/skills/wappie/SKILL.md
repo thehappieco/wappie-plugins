@@ -5,15 +5,15 @@ description: Read the user's WhatsApp archive through Wappie — authorized numb
 
 # Wappie
 
-Wappie keeps an end-to-end encrypted archive of the WhatsApp numbers a user
-connects to it. Its MCP tools are **read-only**: nothing is ever sent, edited,
-deleted or marked as read.
+Wappie archives the WhatsApp numbers a user connects to it and stores their
+content encrypted. Its MCP tools are **read-only**: they cannot write, post,
+reply, delete or change anything, and never mark a message as read.
 
 ## What this connection can and cannot see
 
-- On the hosted connector (`https://api.wappie.thehappie.co/mcp`) content is
-  sealed to the user's own devices. Chat names, contact names, message text and
-  filenames always come back `locked`. You can see who, when, how much and what
+- On the hosted connector (`https://api.wappie.thehappie.co/mcp`) content stays
+  encrypted and the connector holds no key to open it. Chat names, contact
+  names, message text and filenames always come back `locked`. You can see who, when, how much and what
   type of message — never the content.
 - No setting unlocks it on this connection. Do not tell the user to enable
   plaintext or change a configuration; say what the connection shows instead.

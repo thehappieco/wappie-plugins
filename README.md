@@ -6,7 +6,8 @@ assistant to Wappie's hosted MCP connector at
 
 The connector is **read-only and metadata-only**: the assistant sees who, when,
 how much and what type of message, never the content. Message text, names and
-filenames stay sealed to your own devices. You choose which numbers it may read
+filenames are stored encrypted, and the hosted connector holds no key to open
+them. You choose which numbers it may read
 when you sign in to the Wappie console, and you can revoke the connection there
 at any time.
 

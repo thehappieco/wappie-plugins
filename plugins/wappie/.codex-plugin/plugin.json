@@ -20,8 +20,8 @@
   "mcpServers": "./mcp.json",
   "interface": {
     "displayName": "Wappie",
-    "shortDescription": "Read your WhatsApp archive",
-    "longDescription": "Wappie keeps an end-to-end encrypted archive of the WhatsApp numbers you connect to it. This plugin lets your assistant read that archive through Wappie's hosted connector, after you sign in to the Wappie console and choose which numbers it may read. It is read-only: nothing is ever sent, edited or deleted. On the hosted connector content stays sealed to your own devices, so the assistant sees who, when, how much and what type of message, never the text, names or filenames.",
+    "shortDescription": "Read-only message metadata",
+    "longDescription": "Wappie archives the WhatsApp numbers you connect to it and stores their content encrypted. This plugin lets your assistant read that archive through Wappie's hosted connector, after you sign in to the Wappie console and choose which numbers it may read. It is read-only: it cannot write, post, reply, delete or change anything, and it never marks a message as read. The hosted connector holds no key to open message content, so the assistant sees who, when, how much and what type of message, never the text, names or filenames. Wappie is an independent product of The Happie Co and is not affiliated with or endorsed by WhatsApp or Meta.",
     "developerName": "The Happie Co",
     "category": "Communication",
     "capabilities": [
