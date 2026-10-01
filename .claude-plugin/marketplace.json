@@ -1,6 +1,6 @@
 {
   "name": "wappie",
-  "description": "The official Wappie plugin: read-only, metadata-only access to your WhatsApp archive in Wappie.",
+  "description": "The official Wappie plugin: connects your assistant to your WhatsApp archive in Wappie through its attested reader.",
   "owner": {
     "name": "The Happie Co",
     "url": "https://wappie.thehappie.co/"
@@ -9,7 +9,7 @@
     {
       "name": "wappie",
       "source": "./plugins/wappie",
-      "description": "Read-only access to your WhatsApp archive in Wappie: authorized numbers, chats, message metadata and activity."
+      "description": "Access to your WhatsApp archive in Wappie through its attested reader: metadata by default, and message text, attachments, drafts you review in the Wappie console and notes to your own chat only with your consent."
     }
   ]
 }
