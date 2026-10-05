@@ -1,10 +1,10 @@
 # Wappie plugins
 
 The official Wappie plugin for **Codex** and **Claude Code**. It connects the
-assistant to Wappie's MCP connector at `https://mcp.wappie.thehappie.co/mcp`
+assistant to Wappie’s MCP connector at `https://mcp.wappie.thehappie.co/mcp`
 and teaches it how to use it.
 
-The connector is Wappie's **attested reader**: a published image running in an
+The connector is Wappie’s **attested reader**: a published image running in an
 AWS Nitro Enclave, which your browser checks before it seals anything to it.
 Message text, names and filenames are stored encrypted, and the key that opens
 them for a connection is generated inside the enclave and never leaves it.
@@ -15,7 +15,7 @@ which numbers it may read and, where your workspace allows them, what more it
 may read, after confirming it is you:
 
 - **message text and names**, opened inside the enclave;
-- **attachments** (photos, stickers, PDFs, documents and a video's preview
+- **attachments** (photos, stickers, PDFs, documents and a video’s preview
   image), opened inside the enclave, and AI transcripts of voice notes, audio
   and video where you set up an AI integration with your own provider key.
 
@@ -36,11 +36,11 @@ revoking stops future reads, and cannot erase what the assistant already
 received.
 
 > **You do not need this plugin to connect.** Every assistant takes the
-> connector's address as it is: paste `https://mcp.wappie.thehappie.co/mcp` in
+> connector’s address as it is: paste `https://mcp.wappie.thehappie.co/mcp` in
 > Claude (or use the **Connect to Claude** button in the Wappie console), in
 > Codex under *Settings → MCP servers*, in Claude Code with
 > `claude mcp add --transport http --scope user wappie https://mcp.wappie.thehappie.co/mcp`,
-> or as a plugin in ChatGPT's developer mode (below). Install the plugin only if
+> or as a plugin in ChatGPT’s developer mode (below). Install the plugin only if
 > you want its skill, which tells the assistant what the connection can see, how
 > to handle refusals, renewals and an ended connection, and not to read WhatsApp
 > through the screen.
@@ -78,7 +78,7 @@ plugin you create yourself, on the web.
 2. Open <https://chatgpt.com/plugins> and choose **+**.
 3. Name it `Wappie` and **upload the icon now**, in this same step:
    `plugins/wappie/assets/logo.png` from this repository (the same file the
-   Wappie console's ChatGPT tab offers). ChatGPT does not let you add or change
+   Wappie console’s ChatGPT tab offers). ChatGPT does not let you add or change
    it after **Create**.
 4. Under **Connection**, a public endpoint: `https://mcp.wappie.thehappie.co/mcp`,
    authentication **OAuth**. Then **Create**, and sign in to the Wappie console
@@ -91,10 +91,10 @@ pick a model with reasoning (Thinking or Pro): Instant does not see images.
 
 Codex and Claude Code connect through their own sign-in: OAuth with a loopback
 redirect (RFC 8252). The app identifies itself with a client metadata document
-on its publisher's site, opens the Wappie console in your browser, where you
+on its publisher’s site, opens the Wappie console in your browser, where you
 sign in, choose your numbers and approve, and then receives the authorization
 code on a local port of your own computer. The plugin holds no key, token or
-password: only the connector's address.
+password: only the connector’s address.
 
 Connecting again from the same app replaces your previous connection of it in
 that workspace, unless you untick **Replace my previous Codex connection**
