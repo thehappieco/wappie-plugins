@@ -98,11 +98,12 @@ person.
 - **Pending.** `status: "pending"` with `retry_after_s` is not a failure: call
   again with the same arguments after that many seconds. Attachments asked
   for together are opened one after another.
-- **Renewal.** `reconsent_required` means the reader restarted, for example
-  after an update, and cleared this connection's key. Give the user the
-  renewal link from the answer; they renew it in the Wappie console, where
-  they confirm it is them. You do not need to reconnect: stop and wait until
-  they say they have renewed. Metadata keeps working meanwhile.
+- **Renewal.** `reconsent_required` means Wappie's reader no longer holds
+  this connection's key, so it reads no message text until the user renews
+  it. Do not guess why. Give the user the renewal link from the answer; they
+  renew it in the Wappie console, where they confirm it is them. You do not
+  need to reconnect: stop and wait until they say they have renewed.
+  Metadata keeps working meanwhile.
   `stale_grant` (access to a number changed) and `ai_paused` with a
   `renew_url` are handled the same way: give the link exactly as returned and
   wait for the user.

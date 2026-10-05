@@ -1,6 +1,6 @@
 {
   "name": "wappie",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Access to your WhatsApp archive in Wappie through its attested reader: metadata by default, and message text and attachments only with your consent. Codex and Claude Code connect as apps on your computer, so they never draft messages or write notes to your own chat.",
   "author": {
     "name": "The Happie Co",
