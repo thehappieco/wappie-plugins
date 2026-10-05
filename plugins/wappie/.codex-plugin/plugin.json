@@ -1,7 +1,7 @@
 {
   "name": "wappie",
-  "version": "2.0.0",
-  "description": "Access to your WhatsApp archive in Wappie through its attested reader: metadata by default, and message text, attachments, drafts you review in the Wappie console and notes to your own chat only with your consent.",
+  "version": "2.1.0",
+  "description": "Access to your WhatsApp archive in Wappie through its attested reader: metadata by default, and message text and attachments only with your consent. Codex and Claude Code connect as apps on your computer, so they never draft messages or write notes to your own chat.",
   "author": {
     "name": "The Happie Co",
     "url": "https://wappie.thehappie.co/"
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "Wappie",
     "shortDescription": "Metadata by default, content by consent",
-    "longDescription": "Wappie archives the WhatsApp numbers you connect to it and stores their content encrypted. This plugin connects your assistant to Wappie's attested reader, which runs a published image in an AWS Nitro Enclave; your browser checks that image before it seals anything to it. When you sign in to the Wappie console you choose which numbers the assistant may read. By default it sees metadata: who, when, how much and what type of message, not the content. Where Wappie has enabled them for your workspace, you can also allow, with your password: message text and names, and attachments, opened inside the enclave; drafts that you review and confirm yourself in the Wappie console; and notes to your own chat. Voice notes, audio and video are transcribed only where you set up an AI integration with your own provider key. Nothing the assistant drafts reaches anyone until you confirm it, and it cannot delete or edit your messages or mark them as read. You can revoke the connection in the console at any time. Wappie is an independent product of The Happie Co and is not affiliated with or endorsed by WhatsApp or Meta.",
+    "longDescription": "Wappie archives the WhatsApp numbers you connect to it and stores their content encrypted. This plugin connects Codex or Claude Code to Wappie's attested reader, which runs a published image in an AWS Nitro Enclave; your browser checks that image before it seals anything to it. When you sign in to the Wappie console you choose which numbers the assistant may read. By default it sees metadata: who, when, how much and what type of message, not the content. Where your workspace allows them, you can also allow message text and names, and attachments, opened inside the enclave; you confirm it is you in the Wappie console before text is shared. Voice notes, audio and video are transcribed only where you set up an AI integration with your own provider key. Codex and Claude Code connect as apps on your computer: Wappie gives them no drafts and no notes to your own chat, keeps a connection with message text for 7 days unless you choose 1 or 30, and asks you to sign in again after 7 days without use. The assistant cannot send, delete or edit your messages or mark them as read. You can revoke the connection in the console at any time. Wappie is an independent product of The Happie Co and is not affiliated with or endorsed by WhatsApp or Meta.",
     "developerName": "The Happie Co",
     "category": "Communication",
     "capabilities": [

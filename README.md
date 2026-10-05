@@ -11,20 +11,27 @@ them for a connection is generated inside the enclave and never leaves it.
 
 By default the assistant sees **metadata**: who, when, how much and what type
 of message, not the content. When you connect, you choose in the Wappie console
-which numbers it may read and, where Wappie has enabled them for your
-workspace, what more it may do, each confirmed with your password:
+which numbers it may read and, where your workspace allows them, what more it
+may read, after confirming it is you:
 
 - **message text and names**, opened inside the enclave;
 - **attachments** (photos, stickers, PDFs, documents and a video's preview
   image), opened inside the enclave, and AI transcripts of voice notes, audio
-  and video where you set up an AI integration with your own provider key;
-- **drafts** that you review and confirm yourself in the Wappie console;
-  nothing the assistant drafts reaches anyone until you do;
-- **notes to your own chat**.
+  and video where you set up an AI integration with your own provider key.
 
-The tools that write a draft or a note exist only on a connection whose consent
-allows them. The assistant cannot delete or edit your messages and never marks
-a message as read. You can revoke the connection in the console at any time;
+**Codex and Claude Code connect as apps on your computer**, and Wappie treats
+them as such (reader 0.6.0):
+
+- no **drafts** and no **notes to your own chat**: those are offered only to
+  Claude and ChatGPT on the web, and nothing an assistant drafts reaches anyone
+  until you send it yourself from the Wappie console;
+- a connection with **message text lasts 7 days** unless you choose 1 or 30
+  on the consent page (one with metadata only, 30 days unless you choose 7 or
+  90);
+- after **7 days without use** the app asks you to sign in again.
+
+The assistant cannot send, delete or edit your messages and never marks a
+message as read. You can revoke the connection in the console at any time;
 revoking stops future reads, and cannot erase what the assistant already
 received.
 
@@ -33,9 +40,10 @@ received.
 > Claude (or use the **Connect to Claude** button in the Wappie console), in
 > Codex under *Settings → MCP servers*, in Claude Code with
 > `claude mcp add --transport http --scope user wappie https://mcp.wappie.thehappie.co/mcp`,
-> or in ChatGPT's developer mode. Install the plugin only if you want its skill,
-> which tells the assistant what the connection can see, how to handle drafts,
-> refusals and renewals, and not to read WhatsApp through the screen.
+> or as a plugin in ChatGPT's developer mode (below). Install the plugin only if
+> you want its skill, which tells the assistant what the connection can see, how
+> to handle refusals, renewals and an ended connection, and not to read WhatsApp
+> through the screen.
 
 ## Install the plugin
 
@@ -63,9 +71,21 @@ then run `/mcp` to sign in.
 **Connect to Claude** button in the Wappie console, or add
 `https://mcp.wappie.thehappie.co/mcp` as a custom connector.
 
-**ChatGPT on the web**: turn on developer mode in settings and add
-`https://mcp.wappie.thehappie.co/mcp` as a plugin. For attachments, pick a
-model with reasoning (Thinking or Pro): Instant does not see images.
+**ChatGPT on the web** (Plus, Pro, Business, Enterprise or Edu): Wappie is a
+plugin you create yourself, on the web.
+
+1. **Settings → Security and login → Developer mode**: turn it on.
+2. Open <https://chatgpt.com/plugins> and choose **+**.
+3. Name it `Wappie` and **upload the icon now**, in this same step:
+   `plugins/wappie/assets/logo.png` from this repository (the same file the
+   Wappie console's ChatGPT tab offers). ChatGPT does not let you add or change
+   it after **Create**.
+4. Under **Connection**, a public endpoint: `https://mcp.wappie.thehappie.co/mcp`,
+   authentication **OAuth**. Then **Create**, and sign in to the Wappie console
+   when it opens.
+
+Wappie then works in Chat and in Work (type `@` or use **+**). For attachments,
+pick a model with reasoning (Thinking or Pro): Instant does not see images.
 
 ### How Codex and Claude Code sign in
 
@@ -75,6 +95,12 @@ on its publisher's site, opens the Wappie console in your browser, where you
 sign in, choose your numbers and approve, and then receives the authorization
 code on a local port of your own computer. The plugin holds no key, token or
 password: only the connector's address.
+
+Connecting again from the same app replaces your previous connection of it in
+that workspace, unless you untick **Replace my previous Codex connection**
+(or Claude Code) on the consent page. When a connection has expired, was revoked, or lapsed after 7
+days without use, the app reports that Wappie needs you to sign in again
+(Claude Code: `/mcp`); signing in makes a new connection.
 
 ## For a whole team
 

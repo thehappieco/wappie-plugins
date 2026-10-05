@@ -9,7 +9,7 @@
     {
       "name": "wappie",
       "source": "./plugins/wappie",
-      "description": "Access to your WhatsApp archive in Wappie through its attested reader: metadata by default, and message text, attachments, drafts you review in the Wappie console and notes to your own chat only with your consent."
+      "description": "Access to your WhatsApp archive in Wappie through its attested reader: metadata by default, and message text and attachments only with your consent. Codex and Claude Code connect as apps on your computer, so they never draft messages or write notes to your own chat."
     }
   ]
 }
