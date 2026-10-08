@@ -30,7 +30,8 @@ the Wappie console yourself.
 
 ## What each assistant gets (reader 0.6.0)
 
-**Claude** (claude.ai, Desktop, mobile), tested by Wappie. It is the only
+**Claude**, tested by Wappie on the web (claude.ai; Desktop and mobile use
+the same connector). It is the only
 assistant that may be offered **drafts** and **notes to your own chat**, where
 your workspace allows them; nothing an assistant drafts reaches anyone until
 you send it yourself from the Wappie console. Claude needs no plugin (below).
@@ -75,7 +76,8 @@ received.
 > Claude (or use the **Connect to Claude** button in the Wappie console), in
 > Claude Code with
 > `claude mcp add --transport http --scope user wappie https://mcp.wappie.thehappie.co/mcp`,
-> or in Codex under *Settings → MCP servers*. Install the plugin only if you
+> or in Codex as a remote MCP server (Wappie has not checked Codex’s current
+> steps). Install the plugin only if you
 > want its skill, which tells the assistant what the connection can see, how to
 > handle refusals, limits, renewals and an ended connection, and not to read
 > WhatsApp through the screen.
@@ -91,14 +93,13 @@ received.
 
 then run `/mcp` to sign in.
 
-**Codex** (ChatGPT desktop app or CLI), not tested by Wappie:
+**Codex** (CLI), not tested by Wappie:
 
 ```bash
 codex plugin marketplace add thehappieco/wappie-plugins
 codex plugin add wappie@wappie
 ```
 
-or, in the desktop app, open **Plugins**, pick the **Wappie** source and install.
 Start a new session; the first use opens the Wappie console to sign in and
 choose your numbers, on the untested assistant’s card.
 
@@ -118,6 +119,8 @@ password: only the connector’s address.
 Connecting again from the same app replaces your previous connection of it in
 that workspace, unless you untick **Replace my previous … connection** on the
 consent page (it names Claude Code, or an untested app by its domain).
+A connection made before reader 0.6.0 is not replaced this way and keeps
+what it was given until it ends: revoke it in the Wappie console.
 
 When a connection has expired, was revoked, or lapsed without use, every call
 fails with an authorization error and the app reports that Wappie needs you to

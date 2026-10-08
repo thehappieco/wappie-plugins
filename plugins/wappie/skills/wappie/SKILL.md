@@ -40,7 +40,8 @@ specific than this skill.
   With text, `resolve_contact` matches names too; when several candidates fit,
   ask the user instead of choosing.
 - **Which tier this connection is.** `list_numbers` returns a connection
-  block with the tier and `expires_at`: `web_tested` is Claude on the web,
+  block with the tier and `expires_at`: `web_tested` is Claude on the web
+  (or a connection made before reader 0.6.0, whatever the app),
   `local_tested` is Claude Code, `unknown` is an assistant Wappie has not
   tested (Codex and ChatGPT included), and `token` is a console connection
   token. When `expires_at` is near, tell the user they will need to reconnect.
