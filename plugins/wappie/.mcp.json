@@ -2,7 +2,7 @@
   "mcpServers": {
     "wappie": {
       "type": "http",
-      "url": "https://api.wappie.thehappie.co/mcp"
+      "url": "https://mcp.wappie.thehappie.co/mcp"
     }
   }
 }
