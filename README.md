@@ -21,12 +21,11 @@ may read, after confirming it is you:
   and video where you set up an AI integration with your own provider key.
 
 You confirm it is you in the Wappie console: nothing more if you signed in
-within the last ten minutes, otherwise with your passkey or your password, or,
-when your account signs in through The Happie Co, at The Happie Co in a window
-the console opens. Wappie never asks for your password in an e-mail: its
-notice of a new connection has one button, which only revokes that connection,
-and its renewal notice has no link. To renew or to see your assistants, open
-the Wappie console yourself.
+within the last ten minutes, otherwise at The Happie Co, in a window the
+console opens. Wappie never asks for a password in an e-mail: its notice of a
+new connection has one button, which only revokes that connection, and its
+renewal notice has no link. To renew or to see your assistants, open the
+Wappie console yourself and go to its **MCP** screen.
 
 ## What each assistant gets (reader 0.6.0)
 
@@ -45,8 +44,8 @@ you send it yourself from the Wappie console. Claude needs no plugin (below).
 - after **7 days without use** it asks you to sign in again.
 
 **Codex, ChatGPT and any other MCP client are not tested by Wappie.** ChatGPT
-and Codex did not finish Wappie’s live tests, and Wappie gives no steps for
-ChatGPT. An app that adds the address and identifies itself with its own
+and Codex did not finish Wappie’s live tests. In ChatGPT, add the address as a
+custom connector; Wappie gives no further steps for it. An app that adds the address and identifies itself with its own
 client metadata document connects as an **untested assistant**:
 
 - the consent card is amber and names the app by its verified domain (for
@@ -67,8 +66,8 @@ client metadata document connects as an **untested assistant**:
   tokens, among its ten connections.
 
 No assistant sends a message to anyone else, deletes or edits your messages, or
-marks a message as read. You can revoke a connection in the console at any
-time; revoking stops future reads, and cannot erase what the assistant already
+marks a message as read. You can revoke a connection on the console’s MCP
+screen at any time; revoking stops future reads, and cannot erase what the assistant already
 received.
 
 > **You do not need this plugin to connect.** Every assistant takes the
@@ -76,8 +75,8 @@ received.
 > Claude (or use the **Connect to Claude** button in the Wappie console), in
 > Claude Code with
 > `claude mcp add --transport http --scope user wappie https://mcp.wappie.thehappie.co/mcp`,
-> or in Codex as a remote MCP server (Wappie has not checked Codex’s current
-> steps). Install the plugin only if you
+> in Codex as a remote MCP server (Wappie has not checked Codex’s current
+> steps), or in ChatGPT as a custom connector (not tested by Wappie). Install the plugin only if you
 > want its skill, which tells the assistant what the connection can see, how to
 > handle refusals, limits, renewals and an ended connection, and not to read
 > WhatsApp through the screen.
@@ -120,7 +119,7 @@ Connecting again from the same app replaces your previous connection of it in
 that workspace, unless you untick **Replace my previous … connection** on the
 consent page (it names Claude Code, or an untested app by its domain).
 A connection made before reader 0.6.0 is not replaced this way and keeps
-what it was given until it ends: revoke it in the Wappie console.
+what it was given until it ends: revoke it on the Wappie console’s MCP screen.
 
 When a connection has expired, was revoked, or lapsed without use, every call
 fails with an authorization error and the app reports that Wappie needs you to

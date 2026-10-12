@@ -111,9 +111,9 @@ person.
   this connection’s key, so it reads no message text until the user renews
   it. Do not guess why. Give the user the renewal link from the answer; they
   renew it in the Wappie console, where they confirm it is them. The
-  reader’s answer may say “with their password”; the console asks for nothing
-  more after a recent sign-in, and otherwise for a passkey, the password, or a
-  confirmation at The Happie Co. You do not need to reconnect: stop and wait
+  reader’s answer may say “with their password”; Wappie accounts now sign in
+  through The Happie Co, so the console asks for nothing more after a sign-in
+  in the last ten minutes, and otherwise for a confirmation at The Happie Co. You do not need to reconnect: stop and wait
   until they say they have renewed. Metadata keeps working meanwhile. Never
   ask the user for their password yourself, and if they mention an e-mail
   that asks for it, tell them Wappie never asks for a password by e-mail and
